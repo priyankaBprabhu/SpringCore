@@ -3,12 +3,24 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+<!-- Spring Injection Using setter injection using Property tag 
+
 <bean id = "priya" class = "com.Bridgelabz.di.Student">
-	<property name="StudentName" value = "Priyanka"/>
+	<property name="studentName" value = "Priyanka"/>
 	<property name="id" value = "9"/>
 </bean>
 <bean id = "ambika" class = "com.Bridgelabz.di.Student">
-	<property name="StudentName" value = "Ambika"/>
+	<property name="studentName" value = "Ambika"/>
 	<property name="id" value = "10"/>
+</bean> -->
+
+<bean id = "priya" class = "com.Bridgelabz.di.Student">
+	<constructor-arg name="studentName" value = "Priyanka" type = "java.lang.String"/>
+	<constructor-arg name="id" value = "9" type ="int"/>
+</bean>
+<bean id = "ambika" class = "com.Bridgelabz.di.Student">
+	<constructor-arg name="studentName" value = "Ambika" type= "java.lang.String"/>
+	<constructor-arg name="id" value = "10" type ="int"/>
 </bean>
 </beans>
