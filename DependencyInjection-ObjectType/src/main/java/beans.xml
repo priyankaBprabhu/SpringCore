@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+<!--  <bean id = "std" class = "com.Bridgelabz.diot.Student">
+	<property name="id" value = "101"></property>
+	<property name="mathCheat" >
+	<bean class = "com.Bridgelabz.diot.MathCheat"></bean>
+	</property>
+</bean>
+<bean id = "anotherstd" class = "com.Bridgelabz.diot.AnotherStudent">
+	<property name="cheat" >
+	<bean class = "com.Bridgelabz.diot.MathCheat"></bean>
+	</property>
+</bean>  -->
+<!-- updated creation of object -->
+<bean  id = "mathClassObject" class = "com.Bridgelabz.diot.MathCheat"></bean>
+  <bean id = "std" class = "com.Bridgelabz.diot.Student">
+	<property name="id" value = "101"></property>
+	<property name="mathCheat" ref = "mathClassObject" />
+</bean>
+<bean id = "anotherstd" class = "com.Bridgelabz.diot.AnotherStudent">
+	<property name="cheat" ref = "mathClassObject" />
+</bean>  
+</beans>
