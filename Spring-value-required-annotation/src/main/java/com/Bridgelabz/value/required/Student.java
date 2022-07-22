@@ -7,17 +7,17 @@ public class Student  {
 	private String intrestedCourse;
 	private String hobby;
 	
-	@Value("Priyanka")
+	@Value("${Student.name}")
 	public void setName(String name) {
 		this.name = name;
 	}
 	
-	@Value("Java")
+	@Value("${Student.intrestedCourse}")
 	public void setIntrestedCourse(String intrestedCourse) {
 		this.intrestedCourse = intrestedCourse;
 	}
 	
-	@Value("Lisiting to music")
+	@Value("${Student.hobby}")
 	public void setHobby(String hobby) {
 		this.hobby = hobby;
 	}
