@@ -7,7 +7,7 @@ public class Body {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		System.out.println("beans.xml file loaded");
-		Human human = context.getBean("humanObject", Human.class);
+		Human human = context.getBean("human", Human.class);
 		human.startPumping();
 	}
 

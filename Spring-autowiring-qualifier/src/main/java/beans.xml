@@ -9,9 +9,14 @@
 
     <context:annotation-config/>
         
-<bean  id = "heartObject" class = "com.Bridgelabz.autowiring.Heart"></bean>
-<bean  id = "heart" class = "com.Bridgelabz.autowiring.Heart"></bean>
-
-<bean  id = "humanObject" class = "com.Bridgelabz.autowiring.Human" ></bean>
+<bean id = "humanObject" class = "com.Bridgelabz.autowiring.Heart">
+<property name = "animalName" value = "human" />
+<property name = "noOfHearts" value = "1" />
+</bean>
+<bean id = "octopusObject" class = "com.Bridgelabz.autowiring.Heart">
+<property name = "animalName" value = "Octopus" />
+<property name = "noOfHearts" value = "2" />
+</bean>
+<bean  id = "human" class = "com.Bridgelabz.autowiring.Human" ></bean>
 
 </beans>
