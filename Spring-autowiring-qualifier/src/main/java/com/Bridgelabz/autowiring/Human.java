@@ -4,21 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Human {
+	/*
+	 * if we use anotation before dependency obeject, no need to write setter and
+	 * constructor methods
+	 */
+	@Autowired
+	@Qualifier("octopusObject")
 	private Heart heart;
 	
-	public Human() {
-		
-	}
-	
-	public Human(Heart heart) {
-		this.heart = heart;
-	}
-	@Autowired
-	@Qualifier("humanObject")
-	public void setHeart(Heart heart) {
-		this.heart = heart;
-	}
-
 	public void startPumping() {
 		if(heart != null) {
 			heart.pump();
