@@ -10,6 +10,8 @@
     <context:annotation-config/>
         
 <bean  id = "heartObject" class = "com.Bridgelabz.autowiring.Heart"></bean>
+<bean  id = "heart" class = "com.Bridgelabz.autowiring.Heart"></bean>
+
 <bean  id = "humanObject" class = "com.Bridgelabz.autowiring.Human" ></bean>
 
 </beans>
