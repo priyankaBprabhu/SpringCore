@@ -3,12 +3,13 @@ package com.Bridgelabz.autowiring;
 public class Human {
 	private Heart heart;
 	
-	public void setHeart(Heart heart) {
+	public Human(Heart heart) {
 		this.heart = heart;
 	}
+
 	public void startPumping() {
 		if(heart != null) {
-		heart.pump();
+			heart.pump();
 		}else {
 			System.out.println("Dead");
 		}

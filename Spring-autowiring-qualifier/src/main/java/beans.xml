@@ -5,6 +5,6 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
         
 <bean  id = "heartObject" class = "com.Bridgelabz.autowiring.Heart"></bean>
-<bean  id = "humanObject" class = "com.Bridgelabz.autowiring.Human" autowire = "byType"></bean>
+<bean  id = "humanObject" class = "com.Bridgelabz.autowiring.Human" autowire = "constructor"></bean>
 
 </beans>
