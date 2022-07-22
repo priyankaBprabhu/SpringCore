@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+<bean  id = "scienceClassObject" class = "com.Bridgelabz.losecoupling.ScienceCheat"></bean>
+<bean  id = "mathClassObject" class = "com.Bridgelabz.losecoupling.MathCheat"></bean>
+  <bean id = "std" class = "com.Bridgelabz.losecoupling.Student">
+	<property name="id" value = "101"></property>
+	<property name="cheat" ref = "scienceClassObject" />
+</bean>
+</beans>
