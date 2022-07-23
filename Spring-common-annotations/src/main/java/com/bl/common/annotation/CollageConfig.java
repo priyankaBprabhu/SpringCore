@@ -6,8 +6,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CollageConfig {
 	@Bean
+	public Principal principalBean() {
+		return new Principal();
+
+	}
+	@Bean
 	public Student collegeBean() {
-		Student student = new Student();
+		Student student = new Student(principalBean());
 		return student;
 //		or return new student;
 	}
