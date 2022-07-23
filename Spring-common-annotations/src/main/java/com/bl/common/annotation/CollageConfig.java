@@ -8,13 +8,17 @@ public class CollageConfig {
 	@Bean
 	public Principal principalBean() {
 		return new Principal();
-
 	}
 	@Bean
-	public Student collegeBean() {
-		Student student = new Student();
-		student.setPrincipal(principalBean());
-		return student;
+	public Teacher mathteacher() {
+		return new MathTeacher();
+	}
+	@Bean
+	public College collegeBean() {
+		College college = new College();
+		college.setPrincipal(principalBean());
+		college.setTeacher(mathteacher());
+		return college;
 //		or return new student;
 	}
 
