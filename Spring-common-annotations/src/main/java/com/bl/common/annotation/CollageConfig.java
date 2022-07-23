@@ -12,7 +12,8 @@ public class CollageConfig {
 	}
 	@Bean
 	public Student collegeBean() {
-		Student student = new Student(principalBean());
+		Student student = new Student();
+		student.setPrincipal(principalBean());
 		return student;
 //		or return new student;
 	}
